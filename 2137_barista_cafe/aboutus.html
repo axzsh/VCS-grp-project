@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Barista Cafe - About Us</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;700&amp;display=swap"
       rel="stylesheet"
     />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
@@ -105,7 +105,168 @@
         margin-top: 10px;
         color: #f3f3f3;
       }
+      /* Specialty Coffee */
+      .specialty-coffee {
+        padding: 80px 20px;
+        background: #3e2f1c;
+        color: #fff;
+        text-align: center;
+      }
+      .specialty-coffee h2 {
+        color: #c49b63;
+        margin-bottom: 40px;
+      }
+      .coffee-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+      .coffee-item {
+        text-align: center;
+      }
+      .coffee-item img {
+        width: 220px;
+        border-radius: 15px;
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+      .coffee-item img:hover {
+        transform: scale(1.08);
+      }
+      .coffee-item h5 {
+        margin-top: 12px;
+        color: #fff;
+      }
 
+      /* Mini Testimonials */
+      .mini-testimonials {
+        padding: 80px 20px;
+        background: #1a1a1a;
+        color: #fff;
+        text-align: center;
+      }
+      .mini-testimonials h2 {
+        color: #c49b63;
+        margin-bottom: 40px;
+      }
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+      .testimonial {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: 12px;
+        font-style: italic;
+        line-height: 1.6;
+      }
+      .testimonial h6 {
+        margin-top: 15px;
+        font-weight: 600;
+        color: #c49b63;
+      }
+
+      /* Gallery */
+      .cafe-gallery {
+        padding: 80px 20px;
+        background: #2f2f2f;
+        text-align: center;
+      }
+      .cafe-gallery h2 {
+        color: #c49b63;
+        margin-bottom: 40px;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+      .gallery-grid img {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+      }
+      .gallery-grid img:hover {
+        transform: scale(1.05);
+      }
+
+      .our-story,
+      .our-values,
+      .our-mission {
+        padding: 60px 20px;
+        background: linear-gradient(
+          135deg,
+          rgba(62, 47, 28, 0.9),
+          rgba(183, 135, 82, 0.8)
+        );
+        color: #fff;
+      }
+      .story-content,
+      .values-content,
+      .mission-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      .story-text,
+      .values-text,
+      .mission-text {
+        flex: 1 1 480px;
+      }
+      .story-text h2,
+      .values-text h2,
+      .mission-text h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #c49b63;
+        position: relative;
+      }
+      .story-text h2::after,
+      .values-text h2::after,
+      .mission-text h2::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 3px;
+        background: #c49b63;
+        margin-top: 8px;
+      }
+      .story-text p,
+      .values-text p,
+      .mission-text p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        color: #f3f3f3;
+      }
+      .story-image,
+      .values-image,
+      .mission-image {
+        flex: 1 1 400px;
+        text-align: center;
+      }
+      .story-image img,
+      .values-image img,
+      .mission-image img {
+        width: 100%;
+        max-width: 450px;
+        border-radius: 18px;
+        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+        transition: transform 0.4s ease;
+      }
+      .story-image img:hover,
+      .values-image img:hover,
+      .mission-image img:hover {
+        transform: scale(1.05);
+      }
       /* Team Section */
       .team-section {
         display: flex;
@@ -113,28 +274,31 @@
         justify-content: center;
         gap: 30px;
         padding: 60px 20px;
-        max-width: 1200px;
-        margin: auto;
       }
 
       .team-card {
-        background: rgba(0, 0, 0, 0.35);
-        border-radius: 18px;
+        background: rgba(0, 0, 0, 0.45);
+        border-radius: 20px;
         overflow: hidden;
-        width: 260px;
+        width: 270px;
         text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        backdrop-filter: blur(8px);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
       }
       .team-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 18px 28px rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(196, 155, 99, 0.6);
       }
-
+      .team-card:hover img {
+        transform: scale(1.08);
+      }
       .team-card img {
         width: 100%;
         display: block;
         border-bottom: 3px solid #c49b63;
+        transition: transform 0.4s ease;
       }
 
       .team-card .info {
@@ -142,49 +306,54 @@
       }
 
       .team-card .info h3 {
-        margin: 10px 0 5px;
-        font-size: 1.5rem;
+        margin: 12px 0 6px;
+        font-size: 1.6rem;
         font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.5px;
       }
 
       .team-card .info span {
         display: inline-block;
-        background: #c49b63;
+        background: linear-gradient(90deg, #c49b63, #8b5a2b);
         color: #fff;
         font-size: 0.85rem;
-        padding: 3px 10px;
-        border-radius: 5px;
-        margin-bottom: 10px;
+        padding: 4px 12px;
+        border-radius: 30px;
+        margin-bottom: 12px;
+        font-weight: 600;
       }
 
       .team-card .info p {
         font-size: 1rem;
         color: #f1f1f1;
+        line-height: 1.6;
+        min-height: 50px;
       }
       .social-links {
-        margin-top: 15px;
+        margin-top: 18px;
         display: flex;
         justify-content: center;
-        gap: 12px;
+        gap: 14px;
       }
 
       .social-links a {
-        display: inline-flex;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        color: #fff;
+        font-size: 1.15rem;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
+        transition: all 0.35s ease;
       }
 
       .social-links a:hover {
         background: #c49b63;
         color: #fff;
-        transform: translateY(-3px);
+        transform: translateY(-4px) rotate(8deg);
       }
       .site-footer {
         background: linear-gradient(to right, #1a1a1a, #2a2a2a);
@@ -378,6 +547,14 @@
 
       /* Responsive adjustments */
       @media (max-width: 768px) {
+        .story-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .story-text h2::after {
+          margin: 10px auto 0;
+        }
         .footer-section {
           text-align: center;
           margin-bottom: 30px;
@@ -404,188 +581,337 @@
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
           <img
-            src="images/coffee-beans.png"
-            class="navbar-brand-image img-fluid"
             alt="logo"
+            class="navbar-brand-image img-fluid"
+            src="images/coffee-beans.png"
           />
           Barista.co
         </a>
         <button
           class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          data-bs-toggle="collapse"
+          type="button"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"> </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-lg-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html#section_1">Home</a>
+              <a class="nav-link" href="index.html#section_1"> Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">About Us</a>
+              <a class="nav-link active" href="#"> About Us </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#section_3">Our Menu</a>
+              <a class="nav-link" href="index.html#section_3"> Our Menu </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#section_4">Testimonials</a>
+              <a class="nav-link" href="index.html#section_4"> Testimonials </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#section_5">Contact</a>
+              <a class="nav-link" href="index.html#section_5"> Contact </a>
             </li>
           </ul>
           <div class="ms-lg-3">
             <a class="btn custom-btn" href="reservation.html">
-              Reservation <i class="bi-arrow-up-right ms-2"></i>
+              Reservation
+              <i class="bi-arrow-up-right ms-2"> </i>
             </a>
           </div>
         </div>
       </div>
     </nav>
-
+    <section class="our-story">
+      <div class="container">
+        <div class="story-content">
+          <div class="story-text">
+            <h2>Our Story</h2>
+            <p>
+              At
+              <strong> Barista Cafe </strong>
+              , coffee is more than a drink – it’s an experience. Founded with a
+              passion for bringing people together, we’ve created a cozy space
+              where every cup is brewed with care and every guest feels at home.
+            </p>
+            <p>
+              From sourcing the finest beans to handcrafting your favorite
+              blends, our team of creative baristas is dedicated to delivering
+              quality in every sip. Whether you’re here to work, connect, or
+              simply relax, we promise a memorable café experience.
+            </p>
+          </div>
+          <div class="story-image">
+            <img alt="Barista Cafe Story" src="images/about-coffee.jpg" />
+          </div>
+        </div>
+      </div>
+      <!-- Our Values -->
+      <section class="our-values">
+        <div class="container">
+          <div class="values-content">
+            <div class="values-text">
+              <h2>Our Values</h2>
+              <p>
+                <strong> Quality: </strong>
+                Every cup is brewed to perfection using premium beans.
+              </p>
+              <p>
+                <strong> Community: </strong>
+                A welcoming space where friendships and connections grow.
+              </p>
+              <p>
+                <strong> Sustainability: </strong>
+                Ethical sourcing and eco-conscious practices guide everything we
+                do.
+              </p>
+            </div>
+            <div class="values-image">
+              <img alt="Our Values" src="images/coffee-beans.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Mission Statement -->
+      <section class="our-mission">
+        <div class="container">
+          <div class="mission-content">
+            <div class="mission-text">
+              <h2>Our Mission</h2>
+              <p>
+                To craft unforgettable coffee experiences that bring people
+                together, nurture creativity, and foster a vibrant community
+                around the love of coffee.
+              </p>
+            </div>
+            <div class="mission-image">
+              <img alt="Our Mission" src="images/mission.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
     <!-- About Header -->
     <section class="about-header">
       <p>Creative Baristas</p>
       <h1>Meet Our Team</h1>
     </section>
-
     <!-- Team Section -->
     <section class="team-section">
       <div class="team-card">
-        <img src="images/steve.jpg" alt="Steve" />
-        <div class="info">
-          <h3>Steve</h3>
-          <span>Boss</span>
-          <p>Your favourite coffee daily lives tempor.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
         <img
-          src="images/team/portrait-elegant-old-man-wearing-suit.jpg"
           alt="Sandra"
+          src="images/team/portrait-elegant-old-man-wearing-suit.jpg"
         />
         <div class="info">
           <h3>Sandra</h3>
-          <span>Manager</span>
+          <span> Manager </span>
           <p>Your favourite coffee daily lives.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            nihil, dolorem eligendi corporis quis architecto quisquam nobis aut
+            quasi possimus ducimus aliquid similique saepe adipisci non
+            molestias! Adipisci, illum sunt.
+          </p>
           <div class="social-links">
-            <a href="https://github.com/jackson" target="_blank"
-              ><i class="bi bi-github"></i
-            ></a>
-            <a href="https://instagram.com/jackson" target="_blank"
-              ><i class="bi bi-instagram"></i
-            ></a>
-            <a href="https://linkedin.com/in/jackson" target="_blank"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <a href="https://jacksonportfolio.com" target="_blank"
-              ><i class="bi bi-globe"></i
-            ></a>
+            <a href="https://github.com/jackson" target="_blank">
+              <i class="bi bi-github"> </i>
+            </a>
+            <a href="https://instagram.com/jackson" target="_blank">
+              <i class="bi bi-instagram"> </i>
+            </a>
+            <a href="https://linkedin.com/in/jackson" target="_blank">
+              <i class="bi bi-linkedin"> </i>
+            </a>
+            <a href="https://jacksonportfolio.com" target="_blank">
+              <i class="bi bi-globe"> </i>
+            </a>
           </div>
         </div>
       </div>
-
       <div class="team-card">
-        <img src="images/jackson.jpg" alt="Jackson" />
+        <img
+          alt="Sandra"
+          src="images/team/portrait-elegant-old-man-wearing-suit.jpg"
+        />
         <div class="info">
-          <h3>Jackson</h3>
-          <span>Senior</span>
+          <h3>Sandra</h3>
+          <span> Manager </span>
           <p>Your favourite coffee daily lives.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            nihil, dolorem eligendi corporis quis architecto quisquam nobis aut
+            quasi possimus ducimus aliquid similique saepe adipisci non
+            molestias! Adipisci, illum sunt.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/jackson" target="_blank">
+              <i class="bi bi-github"> </i>
+            </a>
+            <a href="https://instagram.com/jackson" target="_blank">
+              <i class="bi bi-instagram"> </i>
+            </a>
+            <a href="https://linkedin.com/in/jackson" target="_blank">
+              <i class="bi bi-linkedin"> </i>
+            </a>
+            <a href="https://jacksonportfolio.com" target="_blank">
+              <i class="bi bi-globe"> </i>
+            </a>
+          </div>
         </div>
       </div>
-
       <div class="team-card">
-        <img src="images/michelle.jpg" alt="Michelle" />
+        <img
+          alt="Sandra"
+          src="images/team/portrait-elegant-old-man-wearing-suit.jpg"
+        />
         <div class="info">
-          <h3>Michelle</h3>
-          <span>Barista</span>
-          <p>Your favourite coffee daily consectetur.</p>
+          <h3>Sandra</h3>
+          <span> Manager </span>
+          <p>Your favourite coffee daily lives.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            nihil, dolorem eligendi corporis quis architecto quisquam nobis aut
+            quasi possimus ducimus aliquid similique saepe adipisci non
+            molestias! Adipisci, illum sunt.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/jackson" target="_blank">
+              <i class="bi bi-github"> </i>
+            </a>
+            <a href="https://instagram.com/jackson" target="_blank">
+              <i class="bi bi-instagram"> </i>
+            </a>
+            <a href="https://linkedin.com/in/jackson" target="_blank">
+              <i class="bi bi-linkedin"> </i>
+            </a>
+            <a href="https://jacksonportfolio.com" target="_blank">
+              <i class="bi bi-globe"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img
+          alt="Sandra"
+          src="images/team/portrait-elegant-old-man-wearing-suit.jpg"
+        />
+        <div class="info">
+          <h3>Sandra</h3>
+          <span> Manager </span>
+          <p>Your favourite coffee daily lives.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+            nihil, dolorem eligendi corporis quis architecto quisquam nobis aut
+            quasi possimus ducimus aliquid similique saepe adipisci non
+            molestias! Adipisci, illum sunt.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/jackson" target="_blank">
+              <i class="bi bi-github"> </i>
+            </a>
+            <a href="https://instagram.com/jackson" target="_blank">
+              <i class="bi bi-instagram"> </i>
+            </a>
+            <a href="https://linkedin.com/in/jackson" target="_blank">
+              <i class="bi bi-linkedin"> </i>
+            </a>
+            <a href="https://jacksonportfolio.com" target="_blank">
+              <i class="bi bi-globe"> </i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-
+    <!-- Gallery Section -->
+    <section class="cafe-gallery">
+      <div class="container">
+        <h2>Gallery Sneak Peek</h2>
+        <div class="gallery-grid">
+          <img alt="Cafe Interior" src="images/gallery/1.jpg" />
+          <img alt="Coffee Art" src="images/gallery/2.jpg" />
+          <img alt="Friends at Cafe" src="images/gallery/3.jpg" />
+          <img alt="Cafe Evening" src="images/gallery/4.jpg" />
+        </div>
+      </div>
+    </section>
     <footer class="site-footer">
       <div class="container">
         <div class="footer-content">
           <!-- Decorative top border -->
           <div class="footer-top-border"></div>
-
           <div class="row">
             <div class="col-lg-4 col-12 mb-4 mb-lg-0">
               <div class="footer-section">
                 <div class="footer-icon">
-                  <i class="bi bi-geo-alt-fill"></i>
+                  <i class="bi bi-geo-alt-fill"> </i>
                 </div>
                 <h4>Where to find us?</h4>
                 <p>Kamalpokhari-Kathmandu , Nepal</p>
-                <a href="#" class="direction-link">
-                  <i class="bi bi-geo-fill me-1"></i> Get Directions
+                <a class="direction-link" href="#">
+                  <i class="bi bi-geo-fill me-1"> </i>
+                  Get Directions
                 </a>
                 <div class="footer-social mt-4">
-                  <a href="#" class="social-icon"
-                    ><i class="bi bi-facebook"></i
-                  ></a>
-                  <a href="#" class="social-icon"
-                    ><i class="bi bi-twitter"></i
-                  ></a>
-                  <a href="#" class="social-icon"
-                    ><i class="bi bi-instagram"></i
-                  ></a>
-                  <a href="#" class="social-icon"
-                    ><i class="bi bi-whatsapp"></i
-                  ></a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-facebook"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-twitter"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-instagram"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-whatsapp"> </i>
+                  </a>
                 </div>
               </div>
             </div>
-
             <div class="col-lg-3 col-12 mb-4 mb-lg-0">
               <div class="footer-section">
                 <div class="footer-icon">
-                  <i class="bi bi-telephone-fill"></i>
+                  <i class="bi bi-telephone-fill"> </i>
                 </div>
                 <h4>Contact Us</h4>
                 <p class="contact-info">
-                  <i class="bi bi-phone me-2"></i>
-                  <a href="tel:3052409671">+977-9823283224</a>
+                  <i class="bi bi-phone me-2"> </i>
+                  <a href="tel:3052409671"> +977-9823283224 </a>
                 </p>
                 <p class="contact-info">
-                  <i class="bi bi-envelope me-2"></i>
-                  <a href="mailto:hello@barista.co">VcsProject@2025gmail.com</a>
+                  <i class="bi bi-envelope me-2"> </i>
+                  <a href="mailto:hello@barista.co">
+                    VcsProject@2025gmail.com
+                  </a>
                 </p>
               </div>
             </div>
-
             <div class="col-lg-5 col-12">
               <div class="footer-section">
                 <div class="footer-icon">
-                  <i class="bi bi-clock-fill"></i>
+                  <i class="bi bi-clock-fill"> </i>
                 </div>
                 <h4>Opening Hours</h4>
                 <ul class="opening-hours-list">
                   <li>
-                    <span>Monday - Friday</span>
-                    <span class="hours">9:00 AM - 6:00 PM</span>
+                    <span> Monday - Friday </span>
+                    <span class="hours"> 9:00 AM - 6:00 PM </span>
                   </li>
                   <li>
-                    <span>Saturday - Sunday</span>
-                    <span class="hours">11:00 AM - 4:30 PM</span>
+                    <span> Saturday - Sunday </span>
+                    <span class="hours"> 11:00 AM - 4:30 PM </span>
                   </li>
                 </ul>
-
                 <div class="special-events mt-3">
                   <p>
-                    <i class="bi bi-music-note-beamed me-2"></i> Live music
-                    every Friday evening
+                    <i class="bi bi-music-note-beamed me-2"> </i>
+                    Live music every Friday evening
                   </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
         <div class="copyright-section">
           <p>Copyright © VcsProject 2025 | All Rights Reserved</p>
         </div>
