@@ -4,9 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Barista Cafe - Menu</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & Custom CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/tooplate-barista.css" rel="stylesheet">
+
   <style>
     body, h1, h2, h3, p {
       margin: 0;
@@ -16,30 +24,11 @@
     body {
       font-family: 'Roboto', sans-serif;
       color: #4A2C2A;
-      background-image: url('/Users/dilishagurung/Desktop/VCS-grp-project/images/Rainy Evening Cafe.jpeg');
+      background-image: url("images/Rainy Evening Cafe.jpeg");
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
     }
-
-    header {
-      background: #4A2C2A;
-      color: #F7F0E8;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    header .logo {
-      font-family: 'Merriweather', serif;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    
-
     main {
       padding: 40px;
       max-width: 900px;
@@ -63,8 +52,7 @@
       align-items: center;
       margin-bottom: 60px;
     }
-    
-    /* Zig-zag pattern */
+
     .menu-category:nth-child(even) {
       flex-direction: row-reverse;
     }
@@ -75,11 +63,10 @@
 
     .menu-image img {
       width: 100%;
-      height: 300px; /* Keep a fixed height for now */
+      height: 300px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       object-fit: cover;
-      /* Placeholder background color */
       background-color: #ddd;
     }
 
@@ -121,7 +108,7 @@
       border-bottom: 2px dotted #D2B48C;
       transform: translateY(-4px);
     }
-    
+
     .item-price {
       font-weight: bold;
       color: #A0522D;
@@ -153,60 +140,56 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Barista Cafe</div>
-    <nav class="navbar navbar-expand-lg">                
-      <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-              <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Barista Cafe Template">
-              Barista
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Barista Cafe Template">
+        Barista
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#section_1">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#section_2">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menu.html">Our Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#section_4">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#section_5">Contact</a>
+          </li>
+        </ul>
+
+        <div class="ms-lg-3">
+          <a class="btn custom-btn custom-border-btn" href="reservation.html">
+            Reservation
+            <i class="bi-arrow-up-right ms-2"></i>
           </a>
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ms-lg-auto">
-                  <li class="nav-item">
-                      <a class="nav-link click-scroll" href="#section_1">Home</a>
-                  </li>
-
-                  <li class="nav-item">
-                      <a class="nav-link click-scroll" href="#section_2">About</a>
-                  </li>
-
-                  <li class="nav-item">
-                      <a class="nav-link click-scroll" href="#section_3">Our Menu</a>
-                  </li>
-
-                  <li class="nav-item">
-                      <a class="nav-link click-scroll" href="#section_4">Reviews</a>
-                  </li>
-
-                  <li class="nav-item">
-                      <a class="nav-link click-scroll" href="#section_5">Contact</a>
-                  </li>
-              </ul>
-
-              <div class="ms-lg-3">
-                  <a class="btn custom-btn custom-border-btn" href="reservation.html">
-                      Reservation
-                      <i class="bi-arrow-up-right ms-2"></i>
-                  </a>
-              </div>
-          </div>
+        </div>
       </div>
+    </div>
   </nav>
-  </header>
 
+  <!-- Menu Content -->
   <main>
     <h1 class="menu-title">Our Menu</h1>
 
     <section class="menu-category">
       <div class="menu-image">
-        <!-- Placeholder for Coffee image -->
-        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/Cat Cappuccino Wallpaper.jpeg" alt="Coffee Image">
+        <img src="images/Cat Cappuccino Wallpaper.jpeg" alt="Coffee Image">
       </div>
       <div class="menu-details">
         <h2>Coffee</h2>
@@ -241,8 +224,7 @@
 
     <section class="menu-category">
       <div class="menu-image">
-        <!-- Placeholder for Tea image -->
-        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/𝐒 𝐄 𝐋 𝐈 𝐍 𝐀.jpeg" alt="Tea Image">
+        <img src="images/𝐒 𝐄 𝐋 𝐈 𝐍 𝐀.jpeg" alt="Tea Image">
       </div>
       <div class="menu-details">
         <h2>Tea</h2>
@@ -277,8 +259,7 @@
 
     <section class="menu-category">
       <div class="menu-image">
-        <!-- Placeholder for Non-Coffee drinks image -->
-        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/Watermelon Lemonade Recipe.jpeg" alt="Non-Coffee Drinks Image">
+        <img src="images/Watermelon Lemonade Recipe.jpeg" alt="Non-Coffee Drinks Image">
       </div>
       <div class="menu-details">
         <h2>Non-Coffee</h2>
@@ -313,8 +294,7 @@
 
     <section class="menu-category">
       <div class="menu-image">
-        <!-- Placeholder for Desserts image -->
-        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/_.jpeg" alt="Desserts Image">
+        <img src="images/_.jpeg" alt="Desserts Image">
       </div>
       <div class="menu-details">
         <h2>Desserts</h2>
@@ -352,5 +332,12 @@
   <footer>
     <p>© Barista Cafe 2024 - Design by You!</p>
   </footer>
+
+  <!-- JS Scripts -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/custom.js"></script>
 </body>
 </html>
