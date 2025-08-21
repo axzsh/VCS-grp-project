@@ -23,6 +23,8 @@
         <link href="css/vegas.min.css" rel="stylesheet">
 
         <link href="css/tooplate-barista.css" rel="stylesheet">
+        <!-- AOS Animation CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
         
 <!--
 
@@ -84,8 +86,11 @@ Bootstrap 5 HTML CSS Template
 
 
                 <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
-
-                    <div class="container">
+                    <video autoplay muted loop playsinline class="hero-bg-video" style="position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;z-index:0;">
+                        <source src="videos\2909914-uhd_3840_2024_24fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="container" style="position:relative;z-index:1;">
                         <div class="row align-items-center">
 
                             <div class="col-lg-6 col-12 mx-auto">
@@ -236,182 +241,100 @@ Bootstrap 5 HTML CSS Template
                 </section>
 
 
-                <section class="menu-section section-padding" id="section_3">
-                    <div class="container">
-                        <div class="row">
+                <section class="specials section-padding" id="section_3">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Specials</h2>
+    <p>Check Our Specials</p>
+  </div><!-- End Section Title -->
 
-                            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                                <div class="menu-block-wrap">
-                                    <div class="text-center mb-4 pb-lg-2">
-                                        <em class="text-white">Delicious Menu</em>
-                                        <h4 class="text-white">Breakfast</h4>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Pancakes</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$12.50</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Fresh brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block my-4">
-                                        <div class="d-flex">
-                                            <h6>
-                                                Toasted Waffle
-                                            </h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="text-white ms-auto"><del>$16.50</del></strong>
-
-                                            <strong class="ms-2">$12.00</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Fried Chips
-                                                <span class="badge ms-3">Recommend</span>
-                                            </h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$15.0</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Rich Milk and Foam</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block my-4">
-                                        <div class="d-flex">
-                                            <h6>Pancakes</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$12.50</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Fresh brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Banana Cakes</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$18.0</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Rich Milk and Foam</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-                                <div class="menu-block-wrap">
-                                    <div class="text-center mb-4 pb-lg-2">
-                                        <em class="text-white">Favourite Menu</em>
-                                        <h4 class="text-white">Coffee</h4>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Latte</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="text-white ms-auto"><del>$12.50</del></strong>
-
-                                            <strong class="ms-2">$7.50</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Fresh brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block my-4">
-                                        <div class="d-flex">
-                                            <h6>
-                                                White Coffee
-                                                <span class="badge ms-3">Recommend</span>
-                                            </h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$5.90</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Chocolate Milk</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$5.50</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Rich Milk and Foam</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block my-4">
-                                        <div class="d-flex">
-                                            <h6>Greentea</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$7.50</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Fresh brewed coffee and steamed milk</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="menu-block">
-                                        <div class="d-flex">
-                                            <h6>Dark Chocolate</h6>
-                                        
-                                            <span class="underline"></span>
-
-                                            <strong class="ms-auto">$7.25</strong>
-                                        </div>
-
-                                        <div class="border-top mt-2 pt-2">
-                                            <small>Rich Milk and Foam</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Mocha Bliss</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Vanilla Cold Brew</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Almond Croissant</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">Hazelnut Latte</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Classic Cappuccino</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="specials-tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Mocha Bliss</h3>
+                <p class="fst-italic">Espresso, rich chocolate, and steamed milk topped with whipped cream.</p>
+                <p>Indulge in the perfect harmony of bold espresso and velvety chocolate, finished with a cloud of whipped cream. A true treat for chocolate and coffee lovers alike.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="images\MochaBliss__46084-removebg-preview.png" alt="Mocha Bliss" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="specials-tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Vanilla Cold Brew</h3>
+                <p class="fst-italic">Slow-steeped cold brew with a hint of vanilla and creamy finish.</p>
+                <p>Our signature cold brew, steeped for hours and infused with natural vanilla, delivers a smooth, refreshing pick-me-up with every sip.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="images\pexels-alejandro-aznar-155337093-28525199-removebg-preview.png" alt="Vanilla Cold Brew" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="specials-tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Almond Croissant</h3>
+                <p class="fst-italic">Buttery croissant filled with almond cream and topped with toasted almonds.</p>
+                <p>Flaky, golden pastry with a luscious almond filling, finished with a sprinkle of toasted almonds for the perfect morning treat.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="images\almond.png" alt="Almond Croissant" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="specials-tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Hazelnut Latte</h3>
+                <p class="fst-italic">Espresso with steamed milk and hazelnut syrup, topped with foam.</p>
+                <p>A creamy blend of espresso and hazelnut, this latte is smooth, nutty, and perfectly balanced for any time of day.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="images\Hazelnut-Mocha-Latte-blog-1-removebg-preview.png" alt="Hazelnut Latte" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="specials-tab-5">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Classic Cappuccino</h3>
+                <p class="fst-italic">Traditional Italian espresso with steamed milk and a thick layer of foam.</p>
+                <p>Our classic cappuccino is rich, robust, and topped with a silky foam cap—simple perfection in every cup.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="images\coffee.png" alt="Classic Cappuccino" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
                 <section class="reviews-section section-padding section-bg" id="section_4">
@@ -666,6 +589,10 @@ Bootstrap 5 HTML CSS Template
         <script src="js/click-scroll.js"></script>
         <script src="js/vegas.min.js"></script>
         <script src="js/custom.js"></script>
-
-    </body>
-</html>
+            <!-- AOS Animation JS -->
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
+            </body>
+        </html>
