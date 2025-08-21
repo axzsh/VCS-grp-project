@@ -361,8 +361,8 @@ strong {
 }
 
 .navbar-brand-image {
-  width: 110px;      /* Increase this value for a bigger logo */
-  max-height: 56px; /* Prevents the navbar from getting too tall */
+  width: 110px;      
+  max-height: 56px; 
   height: auto;
   transition: width 0.2s, max-height 0.2s;
 }
