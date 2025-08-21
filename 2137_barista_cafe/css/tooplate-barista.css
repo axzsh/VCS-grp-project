@@ -1238,3 +1238,80 @@ strong {
   box-shadow: 0 2px 16px rgba(205, 164, 94, 0.08);
 }
 
+/* Timeline Reviews Custom Style */
+.timeline-reviews {
+  position: relative;
+  min-height: 180px;
+  background: #fff8ed;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(205, 164, 94, 0.08);
+  padding: 32px 24px;
+  overflow: hidden;
+}
+.timeline-review {
+  display: none;
+  animation: fadeIn 0.7s;
+}
+.timeline-review.active {
+  display: block;
+}
+.timeline-dots .dot {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  margin: 0 5px;
+  background: #cda45e;
+  border-radius: 50%;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.timeline-dots .dot.active {
+  opacity: 1;
+  box-shadow: 0 0 0 2px #cda45e44;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: none;}
+}
+
+/* Cafe Banner Styles */
+.cafe-banner {
+  background: linear-gradient(90deg, #f7f1e1 60%, #cda45e22 100%);
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(205, 164, 94, 0.08);
+}
+
+.cafe-banner-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 0;
+}
+
+.cafe-banner-marquee span {
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #cda45e;
+  letter-spacing: 2px;
+  animation: cafeBannerScroll 18s linear infinite;
+  padding: 0.5rem 0;
+}
+
+@keyframes cafeBannerScroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.cafe-banner-highlight {
+  background: linear-gradient(90deg, #cda45e 60%, #fff8ed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+

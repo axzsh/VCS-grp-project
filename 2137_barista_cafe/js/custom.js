@@ -41,6 +41,35 @@
     }
   });
 
+  // Timeline review slider for testimonials section
+  (function () {
+    const reviews = document.querySelectorAll('.timeline-review');
+    const dots = document.querySelectorAll('.timeline-dots .dot');
+    if (reviews.length && dots.length) {
+      let idx = 0, timer;
+      function showReview(i) {
+        reviews.forEach((el, j) => el.classList.toggle('active', j === i));
+        dots.forEach((el, j) => el.classList.toggle('active', j === i));
+        idx = i;
+      }
+      function nextReview() {
+        showReview((idx + 1) % reviews.length);
+      }
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          showReview(i);
+          resetTimer();
+        });
+      });
+      function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(nextReview, 5000);
+      }
+      showReview(0);
+      resetTimer();
+    }
+  })();
+
 })(window.jQuery);
 
 
