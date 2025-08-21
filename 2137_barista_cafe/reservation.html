@@ -21,73 +21,64 @@
   <link href="css/vegas.min.css" rel="stylesheet" />
   <link href="css/tooplate-barista.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
-
   <style>
-    .reservation-page {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url("images/coffee-background.jpg") no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-    }
-
-    /* Form enhancements */
+    
     .booking-form-wrap {
-      background: rgba(26, 22, 18, 0.9);
-      border-radius: 15px;
+      background: rgba(26, 22, 18, 0.92);
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-      position: relative;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+      padding: 50px 40px;
+      margin-top: 40px;
+      transition: transform 0.3s ease;
     }
 
-    .booking-form-wrap:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #c49b63, #8b5a2b, #c49b63);
+    .booking-form-wrap:hover {
+      transform: translateY(-5px);
     }
-
-    .booking-form {
-      padding: 40px;
+    .booking-form h2 {
+      font-size: 2.75rem;
+      margin-top: 5px;
+      background: linear-gradient(to right, #d3a264, #f8f9fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
     }
-
+    .booking-form em {
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: #d3d3d3;
+    }
     .form-control {
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       color: #fff;
-      padding: 12px 20px;
+      padding: 14px 18px;
       margin-bottom: 20px;
-      border-radius: 8px;
+      border-radius: 10px;
+      font-size: 1rem;
       transition: all 0.3s ease;
     }
 
     .form-control:focus {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.08);
       border-color: #c49b63;
-      box-shadow: 0 0 0 0.25rem rgba(196, 155, 99, 0.25);
+      box-shadow: 0 0 0 0.25rem rgba(196, 155, 99, 0.3);
       color: #fff;
     }
 
     .form-control::placeholder {
       color: rgba(255, 255, 255, 0.6);
     }
-
     .btn-warning {
       background: linear-gradient(to right, #c49b63, #8b5a2b);
       border: none;
       padding: 12px 30px;
       font-weight: 600;
-      border-radius: 8px;
+      font-size: 1.05rem;
+      border-radius: 10px;
       transition: all 0.3s ease;
-      margin-top: 10px;
+      width: 100%;
     }
 
     .btn-warning:hover {
@@ -95,22 +86,17 @@
       transform: translateY(-2px);
       box-shadow: 0 5px 15px rgba(196, 155, 99, 0.4);
     }
-
-
-    .booking-form h2 {
-      font-size: 2.5rem;
-      margin-top: 10px;
-      background: linear-gradient(to right, #c49b63, #f8f9fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
+    .success-message {
+      background: rgba(25, 135, 84, 0.9);
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 1rem;
+      display: none;
     }
-
-    .booking-form em {
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-    }
-
     .form-control.error {
       border-color: #dc3545;
       box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
@@ -129,48 +115,21 @@
       display: block;
     }
 
-    .success-message {
-      background: rgba(25, 135, 84, 0.9);
-      color: white;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      margin-bottom: 20px;
-      display: none;
+
+    @media (max-width: 768px) {
+      .booking-form {
+        padding: 30px 20px;
+      }
+
+      .btn-warning {
+        padding: 12px 20px;
+      }
+
+      .booking-form h2 {
+        font-size: 2rem;
+      }
     }
 
-
-    .booking-side-info {
-      min-height: 550px;
-      width: auto;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
-      padding: 20px;
-    }
-
-    .overlay-content {
-      background: rgba(0, 0, 0, 0.55);
-      padding: 20px 25px;
-      border-radius: 10px;
-      max-width: 80%;
-    }
-
-    .overlay-content h4 {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .overlay-content p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #e0e0e0;
-    }
   </style>
 </head>
 
@@ -293,7 +252,6 @@
       </div>
       </div>
     </section>
-
 
     <footer class="site-footer">
       <div class="container">
