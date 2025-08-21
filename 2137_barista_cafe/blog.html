@@ -57,6 +57,225 @@
     </section>
 
    <style>
+    .site-footer {
+        background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+        padding: 60px 0 20px;
+        color: #e0e0e0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #c49b63, #8b5a2b, #c49b63);
+      }
+
+      .footer-top-border {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #c49b63, transparent);
+        margin-bottom: 40px;
+      }
+
+      .footer-section {
+        padding: 15px;
+        position: relative;
+      }
+
+      .footer-icon {
+        color: #c49b63;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .footer-section h4 {
+        color: #c49b63;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-section h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: #c49b63;
+      }
+      .booking-side-info {
+        min-height: 550px;
+        width: auto;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 20px;
+      }
+
+      .overlay-content {
+        background: rgba(0, 0, 0, 0.55);
+        padding: 20px 25px;
+        border-radius: 10px;
+        max-width: 80%;
+      }
+
+      .overlay-content h4 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .overlay-content p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #e0e0e0;
+      }
+
+      .footer-section p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .direction-link {
+        color: #c49b63;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .direction-link:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .contact-info a {
+        color: #e0e0e0;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #c49b63;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #e0e0e0;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background: #c49b63;
+        color: #000;
+        transform: translateY(-3px);
+      }
+
+      .opening-hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .opening-hours-list li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      }
+
+      .opening-hours-list .hours {
+        font-weight: 500;
+        color: #c49b63;
+      }
+      .special-events {
+        background: rgba(196, 155, 99, 0.1);
+        padding: 12px 15px;
+        border-radius: 8px;
+        border-left: 3px solid #c49b63;
+      }
+
+      .copyright-section {
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .copyright-section p {
+        margin: 0;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      .copyright-section a {
+        color: #c49b63;
+        text-decoration: none;
+      }
+
+      .copyright-section a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .story-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .story-text h2::after {
+          margin: 10px auto 0;
+        }
+        .footer-section {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .footer-section h4::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .footer-social {
+          justify-content: center;
+        }
+
+        .contact-info {
+          justify-content: center;
+        }
+      }
+    
   .card {
     background: rgba(0, 0, 0, 0.6); /* Transparent black */
     color: #fff; /* White text for contrast */
@@ -134,7 +353,7 @@
 
       <div class="col-md-6 mb-4">
         <div class="card shadow-sm border-0 rounded-4">
-          <img src="images/visit-us.jpg" class="card-img-top rounded-top" alt="Visit The Brew House">
+          <img src="c7.jpg"card-img-top rounded-top" alt="Visit The Brew House">
           <div class="card-body">
             <h3 class="card-title">Visit Us Today</h3>
             <p>The Brew House isn't just a café, it's your second home, your creative corner, your place to pause and breathe. Come by, grab a cup, and see why our guests call it their favorite spot in town.</p>
@@ -146,7 +365,88 @@
 </section>
 
   </main>
-
+<footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Decorative top border -->
+          <div class="footer-top-border"></div>
+          <div class="row">
+            <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+              <div class="footer-section">
+                <div class="footer-icon">
+                  <i class="bi bi-geo-alt-fill"> </i>
+                </div>
+                <h4>Where to find us?</h4>
+                <p>Kamalpokhari-Kathmandu , Nepal</p>
+                <a class="direction-link" href="#">
+                  <i class="bi bi-geo-fill me-1"> </i>
+                  Get Directions
+                </a>
+                <div class="footer-social mt-4">
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-facebook"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-twitter"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-instagram"> </i>
+                  </a>
+                  <a class="social-icon" href="#">
+                    <i class="bi bi-whatsapp"> </i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+              <div class="footer-section">
+                <div class="footer-icon">
+                  <i class="bi bi-telephone-fill"> </i>
+                </div>
+                <h4>Contact Us</h4>
+                <p class="contact-info">
+                  <i class="bi bi-phone me-2"> </i>
+                  <a href="tel:3052409671"> +977-9823283224 </a>
+                </p>
+                <p class="contact-info">
+                  <i class="bi bi-envelope me-2"> </i>
+                  <a href="mailto:hello@barista.co">
+                    VcsProject@2025gmail.com
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-5 col-12">
+              <div class="footer-section">
+                <div class="footer-icon">
+                  <i class="bi bi-clock-fill"> </i>
+                </div>
+                <h4>Opening Hours</h4>
+                <ul class="opening-hours-list">
+                  <li>
+                    <span> Monday - Friday </span>
+                    <span class="hours"> 9:00 AM - 6:00 PM </span>
+                  </li>
+                  <li>
+                    <span> Saturday - Sunday </span>
+                    <span class="hours"> 11:00 AM - 4:30 PM </span>
+                  </li>
+                </ul>
+                <div class="special-events mt-3">
+                  <p>
+                    <i class="bi bi-music-note-beamed me-2"> </i>
+                    Live music every Friday evening
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-section">
+          <p>Copyright © VcsProject 2025 | All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
   <!-- JS FILES -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
