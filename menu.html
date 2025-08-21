@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barista Cafe - Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body, h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #4A2C2A;
+      background-image: url('/Users/dilishagurung/Desktop/VCS-grp-project/images/Rainy Evening Cafe.jpeg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background: #4A2C2A;
+      color: #F7F0E8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header .logo {
+      font-family: 'Merriweather', serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header nav a {
+      color: #F7F0E8;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #D2B48C;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: rgba(247, 240, 232, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .menu-title {
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      font-size: 42px;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
+
+    .menu-category {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 60px;
+    }
+    
+    /* Zig-zag pattern */
+    .menu-category:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .menu-image, .menu-details {
+      flex: 1;
+    }
+
+    .menu-image img {
+      width: 100%;
+      height: 300px; /* Keep a fixed height for now */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      object-fit: cover;
+      /* Placeholder background color */
+      background-color: #ddd;
+    }
+
+    .menu-category h2 {
+      font-family: 'Merriweather', serif;
+      font-size: 28px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #D2B48C;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 15px;
+    }
+
+    .item-name {
+      font-family: 'Merriweather', serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .item-dots {
+      flex-grow: 1;
+      border-bottom: 2px dotted #D2B48C;
+      transform: translateY(-4px);
+    }
+    
+    .item-price {
+      font-weight: bold;
+      color: #A0522D;
+      font-size: 18px;
+    }
+
+    .item-description {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.5;
+      margin-top: 5px;
+    }
+
+    footer {
+      background: #4A2C2A;
+      text-align: center;
+      padding: 20px;
+      color: #F7F0E8;
+    }
+
+    footer a {
+      color: #D2B48C;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Barista Cafe</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="menu-title">Our Menu</h1>
+
+    <section class="menu-category">
+      <div class="menu-image">
+        <!-- Placeholder for Coffee image -->
+        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/Cat Cappuccino Wallpaper.jpeg" alt="Coffee Image">
+      </div>
+      <div class="menu-details">
+        <h2>Coffee</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Espresso</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">A concentrated, full-bodied coffee shot.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Latte</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">Rich espresso with steamed milk and a light foam.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Cappuccino</span><span class="item-dots"></span><span class="item-price">$5.99</span>
+            </div>
+            <p class="item-description">A perfect balance of espresso, steamed milk, and foam.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Americano</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">Espresso shots topped with hot water.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-category">
+      <div class="menu-image">
+        <!-- Placeholder for Tea image -->
+        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/𝐒 𝐄 𝐋 𝐈 𝐍 𝐀.jpeg" alt="Tea Image">
+      </div>
+      <div class="menu-details">
+        <h2>Tea</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Lemon Tea</span><span class="item-dots"></span><span class="item-price">$5.99</span>
+            </div>
+            <p class="item-description">A refreshing blend of black tea and zesty lemon.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Green Tea</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">A light and healthy brew, rich in antioxidants.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Chai Tea</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">Spiced black tea with a blend of aromatic herbs.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Mint Tea</span><span class="item-dots"></span><span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">A cool and invigorating herbal infusion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-category">
+      <div class="menu-image">
+        <!-- Placeholder for Non-Coffee drinks image -->
+        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/Watermelon Lemonade Recipe.jpeg" alt="Non-Coffee Drinks Image">
+      </div>
+      <div class="menu-details">
+        <h2>Non-Coffee</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Hot Chocolate</span><span class="item-dots"></span><span class="item-price">$6.99</span>
+            </div>
+            <p class="item-description">Rich, creamy, and decadent chocolatey goodness.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Milkshake</span><span class="item-dots"></span><span class="item-price">$5.99</span>
+            </div>
+            <p class="item-description">A thick and creamy shake, available in various flavors.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Smoothie</span><span class="item-dots"></span><span class="item-price">$3.99</span>
+            </div>
+            <p class="item-description">A healthy blend of fresh fruits and yogurt.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Lemonade</span><span class="item-dots"></span><span class="item-price">$4.99</span>
+            </div>
+            <p class="item-description">Freshly squeezed lemons for a sweet and tart treat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-category">
+      <div class="menu-image">
+        <!-- Placeholder for Desserts image -->
+        <img src="/Users/dilishagurung/Desktop/VCS-grp-project/images/_.jpeg" alt="Desserts Image">
+      </div>
+      <div class="menu-details">
+        <h2>Desserts</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Chocolate Waffle</span><span class="item-dots"></span><span class="item-price">$5.99</span>
+            </div>
+            <p class="item-description">A warm waffle drizzled with rich chocolate sauce.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Cheesecake</span><span class="item-dots"></span><span class="item-price">$5.99</span>
+            </div>
+            <p class="item-description">Creamy, classic New York style cheesecake.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Brownies</span><span class="item-dots"></span><span class="item-price">$7.99</span>
+            </div>
+            <p class="item-description">Fudgy chocolate brownies, served warm.</p>
+          </div>
+          <div class="menu-item">
+            <div class="item-header">
+              <span class="item-name">Cinnamon Roll</span><span class="item-dots"></span><span class="item-price">$9.99</span>
+            </div>
+            <p class="item-description">A soft, gooey roll with cinnamon and cream cheese frosting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© Barista Cafe 2024 - Design by You!</p>
+  </footer>
+</body>
+</html>
