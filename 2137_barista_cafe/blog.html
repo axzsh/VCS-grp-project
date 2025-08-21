@@ -21,28 +21,47 @@
 
 <body>
   <main>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="images/coffee-beans.png" class="navbar-brand-image img-fluid" alt="Brew House Logo">
-          The Brew House
+          <img
+            alt="logo"
+            class="navbar-brand-image img-fluid"
+            src="images/coffee-beans.png"
+          />
+          Barista.co
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
+        <button
+          class="navbar-toggler"
+          data-bs-target="#navbarNav"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"> </span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-lg-auto">
-            <li class="nav-item"><a class="nav-link click-scroll" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">About</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="#section_3">Our Menu</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="#section_4">Reviews</a></li>
-            <li class="nav-item"><a class="nav-link click-scroll" href="#section_5">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_1"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_3"> Our Menu </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_4"> Testimonials </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_5"> Contact </a>
+            </li>
           </ul>
           <div class="ms-lg-3">
-            <a class="btn custom-btn custom-border-btn" href="reservation.html">
-              Reservation <i class="bi-arrow-up-right ms-2"></i>
+            <a class="btn custom-btn" href="reservation.html">
+              Reservation
+              <i class="bi-arrow-up-right ms-2"> </i>
             </a>
           </div>
         </div>
@@ -60,40 +79,7 @@
     <!-- CSS -->
 
     <style>
-      /* Make navbar overlay the hero section */
-      .navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 10;
-        background: transparent;
-        /* Make it transparent */
-        padding: 1rem 2rem;
-      }
-
-      .navbar .nav-link {
-        color: #fff;
-        /* White links over hero image */
-        transition: 0.3s;
-      }
-
-      .navbar .nav-link:hover {
-        color: #ffcc66;
-        /* Hover color */
-      }
-
-      .navbar .custom-btn {
-        background-color: rgba(255, 102, 0, 0.8);
-        color: #fff;
-        border-radius: 50px;
-        transition: 0.3s;
-      }
-
-      .navbar .custom-btn:hover {
-        background-color: rgba(255, 102, 0, 1);
-      }
-
+     
       .hero-section {
         height: 100vh;
         /* Full screen */
