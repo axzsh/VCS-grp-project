@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Brew House">
+  <meta name="author" content="">
+
+  <title>The Brew House - Blog</title>
+
+  <!-- CSS FILES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/tooplate-barista.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            alt="logo"
+            class="navbar-brand-image img-fluid"
+            src="images/coffee-beans.png"
+          />
+          The Brew House
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-target="#navbarNav"
+          data-bs-toggle="collapse"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"> About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_3">  Menu </a>
+            </li>
+            <li class="nav-item">
+          <a class="nav-link active" href="blog.html">Blog</a>
+        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_4"> Reviews </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#section_5"> Contact </a>
+            </li>
+            
+          </ul>
+          <div class="ms-lg-3">
+            <a class="btn custom-btn" href="reservation.html">
+              Reservation
+              <i class="bi-arrow-up-right ms-2"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section" id="section_1">
+      <div class="container text-center">
+        <h1>Welcome to The Brew House - Where Every Sip Tells a Story</h1>
+        <p>A cozy corner where great coffee meets warm connections.</p>
+        
+      </div>
+    </section>
+
+    <!-- CSS -->
+
+    <style>
+     
+      .hero-section {
+        height: 100vh;
+        /* Full screen */
+        background-image: url('c1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      /* Add a dark overlay for better text readability */
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* semi-transparent black overlay */
+        z-index: 1;
+      }
+
+      .hero-section .container {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .hero-section p {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .hero-section .custom-btn {
+        margin-top: 2rem;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+        background-color: #ff6600;
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        transition: 0.3s;
+      }
+
+      .hero-section .custom-btn:hover {
+        background-color: #ff8533;
+      }
+
+      .site-footer {
+        background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+        padding: 60px 0 20px;
+        color: #e0e0e0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .site-footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #c49b63, #8b5a2b, #c49b63);
+      }
+
+      .footer-top-border {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #c49b63, transparent);
+        margin-bottom: 40px;
+      }
+
+      .footer-section {
+        padding: 15px;
+        position: relative;
+      }
+
+      .footer-icon {
+        color: #c49b63;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .footer-section h4 {
+        color: #c49b63;
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-section h4::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 2px;
+        background: #c49b63;
+      }
+
+      .booking-side-info {
+        min-height: 550px;
+        width: auto;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 20px;
+      }
+
+      .overlay-content {
+        background: rgba(0, 0, 0, 0.55);
+        padding: 20px 25px;
+        border-radius: 10px;
+        max-width: 80%;
+      }
+
+      .overlay-content h4 {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .overlay-content p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #e0e0e0;
+      }
+
+      .footer-section p {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      .direction-link {
+        color: #c49b63;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .direction-link:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      .contact-info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .contact-info a {
+        color: #e0e0e0;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .contact-info a:hover {
+        color: #c49b63;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+      }
+
+      .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #e0e0e0;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background: #c49b63;
+        color: #000;
+        transform: translateY(-3px);
+      }
+
+      .opening-hours-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .opening-hours-list li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      }
+
+      .opening-hours-list .hours {
+        font-weight: 500;
+        color: #c49b63;
+      }
+
+      .special-events {
+        background: rgba(196, 155, 99, 0.1);
+        padding: 12px 15px;
+        border-radius: 8px;
+        border-left: 3px solid #c49b63;
+      }
+
+      .copyright-section {
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .copyright-section p {
+        margin: 0;
+        color: #999;
+        font-size: 0.9rem;
+      }
+
+      .copyright-section a {
+        color: #c49b63;
+        text-decoration: none;
+      }
+
+      .copyright-section a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .story-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .story-text h2::after {
+          margin: 10px auto 0;
+        }
+
+        .footer-section {
+          text-align: center;
+          margin-bottom: 30px;
+        }
+
+        .footer-section h4::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .footer-social {
+          justify-content: center;
+        }
+
+        .contact-info {
+          justify-content: center;
+        }
+      }
+
+      .card {
+        background: rgba(0, 0, 0, 0.6);
+        /* Transparent black */
+        color: #fff;
+        /* White text for contrast */
+      }
+
+      .card h2,
+      .card h3,
+      .card p,
+      .card li {
+        color: #fff;
+        /* Ensure all text stays readable */
+      }
+
+      .card-img-top,
+      .card img {
+        border-top-left-radius: 0.75rem;
+        border-top-right-radius: 0.75rem;
+      }
+    </style>
+
+    <section class="about-section section-padding" id="section_2">
+      <div class="container">
+        <div class="row align-items-center mb-4">
+          <div class="col-lg-12">
+            <div class="card shadow-lg border-0 rounded-4">
+              <div class="row g-0 align-items-center">
+                <div class="col-lg-6">
+                  <img src="c2.jpg" class="img-fluid rounded-start" alt="The Brew House Interior">
+                </div>
+                <div class="col-lg-6 p-4">
+                  <h2>Our Story</h2>
+                  <p>There's something magical about a café. It's more than just a place to grab your morning
+                    coffee—it's where conversations spark, ideas are born, and comfort is brewed into every cup. At
+                    <strong>The Brew House</strong>, we've made it our mission to create that perfect little corner
+                    where great coffee meets warm connections.</p>
+                  <p>The Brew House was built with a simple idea; coffee should be more than a drink—it should be an
+                    experience. From sourcing the finest beans to perfecting each brew, we believe in serving quality
+                    that you can taste in every sip.</p>
+                  <p>Whether you're here for a strong espresso to kickstart your day, or a soothing latte to unwind, our
+                    baristas craft every cup with care.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- More Than Just Coffee -->
+        <div class="row mt-4">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-4">
+              <img src="c6.jpg" class="card-img-top rounded-top" alt="Signature Brews">
+              <div class="card-body">
+                <h3 class="card-title">More Than Just Coffee</h3>
+                <ul class="mb-0">
+                  <li><strong>Signature Brews</strong> Unique blends and seasonal specials.</li>
+                  <li><strong>Fresh Bites</strong> From buttery croissants to hearty sandwiches.</li>
+                  <li><strong>Beyond Coffee</strong> Herbal teas and refreshing iced.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-4">
+              <img src="c3.jpg" class="card-img-top rounded-top" alt="Cafe Space">
+              <div class="card-body">
+                <h3 class="card-title">A Space for Everyone</h3>
+                <p>Whether you're a student looking for a cozy study spot, a remote worker in need of Wi-Fi, or just
+                  catching up with friends, our inviting interiors and friendly staff make it the perfect place to stay
+                  awhile.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Community & Visit -->
+        <div class="row mt-4">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-4">
+              <img src="c5.jpg" class="card-img-top rounded-top" alt="Community Events">
+              <div class="card-body">
+                <h3 class="card-title">Join the Brew House Community</h3>
+                <p>We're more than just a café - we're a community hub. From live acoustic nights to latte art
+                  workshops, there's always something brewing at our space.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card shadow-sm border-0 rounded-4">
+              <img src="c7.jpg" card-img-top rounded-top" alt="Visit The Brew House">
+              <div class="card-body">
+                <h3 class="card-title">Visit Us Today</h3>
+                <p>The Brew House isn't just a café, it's your second home, your creative corner, your place to pause
+                  and breathe. Come by, grab a cup, and see why our guests call it their favorite spot in town.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Decorative top border -->
+        <div class="footer-top-border"></div>
+        <div class="row">
+          <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <div class="footer-icon">
+                <i class="bi bi-geo-alt-fill"> </i>
+              </div>
+              <h4>Where to find us?</h4>
+              <p>Kamalpokhari-Kathmandu , Nepal</p>
+              <a class="direction-link" href="#">
+                <i class="bi bi-geo-fill me-1"> </i>
+                Get Directions
+              </a>
+              <div class="footer-social mt-4">
+                <a class="social-icon" href="#">
+                  <i class="bi bi-facebook"> </i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="bi bi-twitter"> </i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="bi bi-instagram"> </i>
+                </a>
+                <a class="social-icon" href="#">
+                  <i class="bi bi-whatsapp"> </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+            <div class="footer-section">
+              <div class="footer-icon">
+                <i class="bi bi-telephone-fill"> </i>
+              </div>
+              <h4>Contact Us</h4>
+              <p class="contact-info">
+                <i class="bi bi-phone me-2"> </i>
+                <a href="tel:3052409671"> +977-9823283224 </a>
+              </p>
+              <p class="contact-info">
+                <i class="bi bi-envelope me-2"> </i>
+                <a href="mailto:hello@barista.co">
+                  VcsProject@2025gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-5 col-12">
+            <div class="footer-section">
+              <div class="footer-icon">
+                <i class="bi bi-clock-fill"> </i>
+              </div>
+              <h4>Opening Hours</h4>
+              <ul class="opening-hours-list">
+                <li>
+                  <span> Monday - Friday </span>
+                  <span class="hours"> 9:00 AM - 6:00 PM </span>
+                </li>
+                <li>
+                  <span> Saturday - Sunday </span>
+                  <span class="hours"> 11:00 AM - 4:30 PM </span>
+                </li>
+              </ul>
+              <div class="special-events mt-3">
+                <p>
+                  <i class="bi bi-music-note-beamed me-2"> </i>
+                  Live music every Friday evening
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-section">
+        <p>Copyright © VcsProject 2025 | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+  <!-- JS FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
