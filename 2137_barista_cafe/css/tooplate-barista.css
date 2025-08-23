@@ -624,7 +624,7 @@ strong {
 }
 
 .about-video-info {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(188, 108, 37, 1));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgb(67, 41, 17));
   border-radius: var(--border-radius-medium);
   bottom: 0;
   height: auto;
@@ -665,7 +665,7 @@ strong {
 }
 
 .team-block-info {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(188, 108, 37, 1));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgb(60, 36, 15));
   position: absolute;
   z-index: 2;
   top: 0;
@@ -682,72 +682,13 @@ strong {
 }
 
 
-/*---------------------------------------
-  OUR MENU              
------------------------------------------*/
-.menu-section {
-  background-image: url('../images/happy-waitress-giving-coffee-customers-while-serving-them-coffee-shop.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.menu-block-wrap {
-  background: rgba(0, 0, 0, 0.65);
-  border-radius: var(--border-radius-medium);
-  padding: 45px;
-}
-
-.menu-block .border-top {
-  border-top-color: rgba(255, 255, 255, 0.35) !important;
-}
-
-.menu-block h6 {
-  color: var(--white-color);
-}
-
-.menu-block small {
-  color: rgba(255, 255, 255, 0.35);
-}
-
-.menu-block strong {
-  color: var(--secondary-color);
-}
-
-.menu-block-image {
-  border-radius: 100%;
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  margin: auto;
-  cursor: pointer;
-}
-
-.badge {
-  background-color: var(--primary-color);
-  font-size: 12px;
-  position: relative;
-  bottom: 4px;
-  padding-bottom: 6px;
-}
-
-.badge::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -5px;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-right: 10px solid var(--primary-color);
-}
 
 
 /*---------------------------------------
   REVIEWS              
 -----------------------------------------*/
 .reviews-section {
-  background-color: #7c5c52;
+  background-color: #51391e;
 }
 
 .reviews-block {
@@ -784,11 +725,23 @@ strong {
 .reviews-block-info p {
   font-size: var(--btn-font-size);
   font-style: italic;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(10, 7, 7, 0.75);
 }
 
 .reviews-group i {
   color: var(--white-color);
+}
+
+/* Make review text coffee brown for better readability */
+.timeline-review p,
+.timeline-review .fst-italic {
+  color: #4e342e !important; /* Deep coffee brown */
+}
+
+.timeline-review h6,
+.timeline-review em,
+.timeline-review strong {
+  color: #cda45e !important; /* Gold accent for names, roles, ratings */
 }
 
 
@@ -844,8 +797,11 @@ strong {
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
+/* Contact Section Background */
 .contact-section {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(188, 108, 37, 1)), url('../images/young-female-barista-wear-face-mask-serving-take-away-hot-coffee-paper-cup-consumer-cafe.jpg');
+  background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(109, 90, 55, 0.7)),
+   url('../images/pexels-adam-lukac-254247-773958.jpg')
+  no-repeat center center;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1251,6 +1207,7 @@ strong {
 .timeline-review {
   display: none;
   animation: fadeIn 0.7s;
+  
 }
 .timeline-review.active {
   display: block;
@@ -1277,9 +1234,14 @@ strong {
 
 /* Cafe Banner Styles */
 .cafe-banner {
-  background: linear-gradient(90deg, #f7f1e1 60%, #cda45e22 100%);
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(205, 164, 94, 0.08);
+  background: #cda45e;
+  border-radius: 0px;
+  box-shadow: 0 4px 32px rgba(205, 164, 94, 0.15);
+  margin: 0;
+  padding: 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .cafe-banner-marquee {
@@ -1290,14 +1252,24 @@ strong {
   padding: 0;
 }
 
-.cafe-banner-marquee span {
+.cafe-banner-marquee h2 {
   display: inline-block;
   font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #cda45e;
-  letter-spacing: 2px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #f7f1e1;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 8px #b89b5e44;
   animation: cafeBannerScroll 18s linear infinite;
-  padding: 0.5rem 0;
+  padding: 1.2rem 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .cafe-banner-marquee h2 {
+    font-size: 1.5rem;
+    padding: 0.7rem 0;
+  }
 }
 
 @keyframes cafeBannerScroll {
@@ -1309,9 +1281,10 @@ strong {
   }
 }
 .cafe-banner-highlight {
-  background: linear-gradient(90deg, #cda45e 60%, #fff8ed 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  color: #f7f1e1; /* Cream text */
 }
 
