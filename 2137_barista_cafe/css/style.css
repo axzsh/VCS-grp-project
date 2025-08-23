@@ -14,7 +14,11 @@ nav.navbar {
   backdrop-filter: blur(6px);
   transition: all 0.3s ease-in-out;
 }
-
+.custom-logo{
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
 nav.navbar.scrolled {
   background: rgba(62, 47, 28, 0.95);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
