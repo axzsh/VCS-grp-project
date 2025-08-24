@@ -53,7 +53,7 @@ The Brew House/
 │── index.html         # Home page
 │── menu.html          # Menu page
 │── reservation.html   # Reservation form
-│── slehsmaportfolio.html  # Portfolio page
+│── sleshmaportfolio.html  # Portfolio page
 │── AJportfolio.html       # Portfolio page
 ```
 
