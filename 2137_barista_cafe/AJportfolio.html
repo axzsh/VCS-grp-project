@@ -19,6 +19,9 @@
                 t = " w-mod-";
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
+        function playSound() {
+      document.getElementById("clickSound").play();
+    }
     </script>
     
     <link href="https://cdn.prod.website-files.com/6849810079ba14868893d16e/684c5da91efbebef23e1fe00_Favicon.png" rel="shortcut icon" type="image/x-icon">
@@ -80,6 +83,11 @@
 </head>
 
 <body>
+    <button onclick="playSound()">Click Me</button>
+
+  <!-- Audio element (hidden) -->
+  <audio id="clickSound" src="fur-elise-music-box-70375.mp3"></audio>
+
      <!-- Navigation -->
     <nav class="navbar">
         <ul class="nav-menu">
