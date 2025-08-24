@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sleshma Maharjan's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f8e8f2;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      font-weight: bold;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      background: #2e2440;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li {
+      font-size: 1rem;
+    }
+
+    nav ul li a:hover {
+      color: #e6b3ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #2e2440;
+      color: white;
+      padding: 120px 50px 80px;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+
+    .hero-text button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #e6b3ff;
+      color: #2e2440;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hero-text button:hover {
+      background: #d291fa;
+    }
+
+    .hero img {
+      width: 280px;
+      border-radius: 50%;
+    }
+
+    /* About Section */
+    .about {
+      background: #fbe6f2;
+      text-align: center;
+      padding: 70px 50px;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1rem;
+    }
+
+    /* Skills Section */
+    .skills {
+      background: #fcdff3;
+      text-align: center;
+      padding: 70px 50px;
+    }
+
+    .skills h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .skill-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .skill-icons img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #2e2440;
+      padding: 10px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    .skill-icons img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Projects Section */
+    .projects {
+      background: #f6ebf7;
+      text-align: center;
+      padding: 70px 50px;
+    }
+
+    .projects h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+   /* Footer Styling */
+    footer {
+      background-color: #2a2342; /* dark purple */
+      color: #fff;
+      padding: 30px 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    /* Left Side */
+    .footer-left {
+      text-align: center;
+    }
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .footer-left h3 {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    /* Right Side */
+    .footer-right {
+      max-width: 400px;
+    }
+    .social-icons {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+    .social-icons a {
+      color: #fff;
+      font-size: 20px;
+      margin-left: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .social-icons a:hover {
+      color: #a78bfa; /* light purple hover */
+    }
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .contact-info li {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+    .contact-info i {
+      margin-right: 8px;
+      color: #a78bfa;
+    }
+
+    /* Bottom Bar */
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      border-top: 1px solid #444;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">My Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Hi, I'm Sleshma Maharjan</h2>
+      <h1>A Visionary 🚀<br> Software Developer</h1>
+      <p>“Passionate about building user-friendly apps & solving real-world problems.”</p>
+      <button onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'});">
+        Projects
+      </button>
+    </div>
+    <img src="images/cari.png" alt="Mascot Image">
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>More About Me</h2>
+    <img src="images/caro2.png" alt="Faceshot Image">
+    <p>
+      Hi, I’m Sleshma Maharjan, a passionate and detail-oriented Software Developer with a strong focus on building efficient, user-friendly, and impactful digital solutions. 
+      I enjoy solving problems through clean and creative code while continuously learning new technologies to stay ahead in the ever-evolving tech world.
+      With a foundation in software development, UI/UX design, and modern frameworks, I thrive on turning ideas into reality—whether it’s designing 
+      intuitive interfaces, developing robust back-end systems, or crafting seamless user experiences.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skill-icons">
+      <img src="images/prolan.png" alt="Programming Languages">
+      <img src="images/develop.jpeg" alt="Web Development">
+      <img src="images/git.png" alt="Version Control System">
+      <img src="images/designui.webp" alt="UI/UX Design">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>My Project Collection</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/java.webp" alt="Java Project">
+        <h3>Java Gym System</h3>
+        <p>Creating a Gym Member Management System using OOP and GUI with Swing.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/python.webp" alt="Python Project">
+        <h3>Python Skincare Store</h3>
+        <p>A console-based system for managing skincare products with invoices.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/webb.jpg" alt="Html/CSS Project">
+        <h3>HTML/CSS/Javascript</h3>
+        <p>Responsive websites using HTML, CSS and JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <!-- Left Side: Profile -->
+      <div class="footer-left">
+        <img src="images/logo.png" alt="Sleshma Maharjan" class="profile-pic">
+      </div>
+
+      <!-- Right Side: Contact + Social -->
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/sleshma-maharjan-45878b329/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook" target="_blank"></i></a>
+        </div>
+        <ul class="contact-info">
+          <li><i class="fa-solid fa-envelope"></i> sleshma.mah202@gmail.com</li>
+          <li><i class="fa-solid fa-phone"></i> 9867614678</li>
+          <li><i class="fa-solid fa-map-marker-alt"></i> Panga Rd, Kirtipur</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Sleshma Maharjan. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

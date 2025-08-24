@@ -22,6 +22,14 @@
 
     <style>
      
+     header {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;  /* ensures it's above the hero image */
+  background: transparent;  /* remove white background */
+}
       .hero-section {
         height: 100vh;
         /* Full screen */
@@ -313,6 +321,7 @@
 
 <body>
   <main>
+    <header>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">                
                     <div class="container">
@@ -335,7 +344,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link click-scroll" href="#section_3">Our Menu</a>
+                                    <a class="nav-link click-scroll" href="menu.html">Our Menu</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="blog.html">Blog</a>
@@ -343,11 +352,11 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link click-scroll" href="#section_4">Reviews</a>
+                                    <a class="nav-link click-scroll" href="index.html#section_4">Reviews</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                                    <a class="nav-link click-scroll" href="contact.html">Contact</a>
                                 </li>
                             </ul>
 
@@ -360,7 +369,7 @@
                         </div>
                     </div>
                 </nav>
-
+</header>
 
     <section class="hero-section" id="section_1">
       <div class="container text-center">
