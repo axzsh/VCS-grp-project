@@ -67,7 +67,7 @@ The Brew House/
    ```
 2. Navigate to the project folder:  
    ```bash
-   cd the-brew-house
+   cd 2137_barista_cafe
    ```
 3. Open `index.html` in your browser.  
 
@@ -96,7 +96,7 @@ This project followed a collaborative Git workflow:
 ## 📸 Demo  
 
 - **Live Website**: [GitHub Pages/Netlify Link](#)  
-- **Screenshots/Demo Video**: [Link here](#)  
+- **Screenshots**: [](#)  
 
 ---
 
